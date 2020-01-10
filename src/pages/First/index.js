@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import {
     Checkbox
 } from "antd";
+import testImg from '../../assets/test3.jpg';
 
 export default function Example () {
+    console.log('44444');
     const [count, setCount] = useState(() => ({ time: 4 }));
     const [age, setAge] = useState(new Date());
     const [checked, setCheck] = useState(true);
@@ -41,6 +43,7 @@ export default function Example () {
              checked={checked}
              indeterminate={indeterminate}
             />
+            <img src={testImg} />
         </div>
 
     )

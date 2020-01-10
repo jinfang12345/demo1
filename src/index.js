@@ -1,14 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Modal } from 'antd';
+import { createBrowserHistory } from 'history';
 import './index.css';
 import 'antd/dist/antd.css'
 import App from './App';
-import { createBrowserHistory } from 'history';
 import * as serviceWorker from './serviceWorker';
+const { confirm } = Modal;
 const history = createBrowserHistory({
     getUserConfirmation: (message, callback) => {
-        console.log('message', message);
-        callback(false);
+        // confirm({
+        //     title: '当前编辑信息未保存！是否离开？',
+        //     content: '离开后将不保存已填写信息',
+        //     okText: '离开',
+        //     cancelText: '取消',
+        //     onOk(){
+        //         callback(true);
+        //     },
+        //     onCancel() {
+        //         callback(false);
+        //     }
+        // })
+        callback(true)
     }
 });
 ReactDOM.render(
